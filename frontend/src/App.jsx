@@ -26,7 +26,7 @@ function App() {
               return;
             }
             console.log(parsedData);
-            const res = await axios.post('/api/bfhl', parsedData);
+            const res = await axios.post('https://bajaj-assignment-seven.vercel.app/bfhl', parsedData);
             setOptions(Object.keys(res.data));
             setResponse(res.data);
             setHasSubmitted(true);
