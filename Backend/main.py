@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
+import uvicorn
+
 
 app = FastAPI()
 app.add_middleware(
@@ -52,4 +54,6 @@ async def bfhl_get():
         "operation_code": 1
     }
     
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
     
